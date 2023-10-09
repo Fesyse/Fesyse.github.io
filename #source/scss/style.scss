@@ -1,0 +1,138 @@
+@import "nullstyle.scss";
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+
+body {
+    font-family: Josefin Sans;
+}
+
+.main {
+    background: url(../img/bg.jpg);
+    &__container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+    }
+
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__restart-button {
+        margin-top: 50px;
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        font-size: 3rem;
+        padding-top: 7.5px;
+        transition: 0.5s;
+        &:active {
+            transform: scale(0.9);
+            transition: 0.5s;
+        }
+    }
+    &__win {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        color: #FFF;
+        padding: 12px 10px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 2.75rem;
+        padding: 118.25px 0;
+        text-align: center;
+        span {
+            margin-bottom: 20px;
+            display: none;
+            font-size: 50px;
+        }
+    }
+    &__win.active {
+        display: block;
+        span {
+            display: block;
+        }
+    }
+    &__tie {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        color: #FFF;
+        padding: 12px 10px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 2.75rem;
+        span {
+            display: none;
+            margin: 125px 35px;
+        }
+    }
+    &__tie.active{
+        display: block;
+        span {
+           display: block;
+        }
+    }
+}
+.container {
+}
+.buttons-wrapper {
+    margin: 0 auto;
+}
+.button {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    &__wrapper {
+        display: flex;
+        box-shadow: 0 0 250px #000;
+    }
+    font-size: 5rem;
+}
+
+.button[value="1"] {
+    border-top-left-radius: 10px;
+    border-right: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+.button[value="2"] {
+    border-bottom: 5px solid #000;
+}
+.button[value="3"] {
+    border-top-right-radius: 10px;
+    border-left: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+.button[value="4"] {
+    border-right: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+.button[value="5"] {
+    border-bottom: 5px solid #000;
+}
+.button[value="6"] {
+    border-bottom: 5px solid #000;
+    border-left: 5px solid #000;
+}
+.button[value="7"] {
+    border-right: 5px solid #000;
+    border-bottom-left-radius: 10px;
+}
+.button[value="8"] {
+}
+.button[value="9"] {
+    border-bottom-right-radius: 10px;
+    border-left: 5px solid #000;
+}
